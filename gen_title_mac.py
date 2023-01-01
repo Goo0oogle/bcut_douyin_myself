@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # @Time : 2022/12/7 10:18 上午
 # @Author : chenxiangan
-# @File : gen_title.py
+# @File : gen_title_mac.py
 # @Software: PyCharm
 import glob
 import json

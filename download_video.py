@@ -5,6 +5,7 @@
 # @Software: PyCharm
 import json
 import os
+import re
 import shutil
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -26,7 +27,7 @@ def read_file(file_name):
 
 def save_video(each_item,file_name):
     title = each_item.get("desc")
-    title = title.strip().replace(" ", "").replace("/", "").replace("\"", "").replace("#", "")
+    title = re.sub('[\/:*?"<>|]', '-', title)  # 去掉非法字符
     video_url = each_item.get("video").get("play_addr").get("url_list")[0]
     full_path = os.path.join(file_name, f"{title}.mp4")
     path = f"{file_name}/{title}.mp4"

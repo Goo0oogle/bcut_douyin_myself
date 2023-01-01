@@ -30,7 +30,7 @@ def ffmpeg_render(media_file: str) -> bytes:
 
 
 def run():
-    path = "/Users/chennan/Movies/douyin_video/yuanjun"
+    path = "/Users/chennan/Movies/douyin_video/yuanjun/new"
     mp4_list = glob.glob(f"{path}/*.mp4")
 
     try:
